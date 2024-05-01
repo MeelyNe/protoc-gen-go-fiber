@@ -16,7 +16,7 @@ type {{.ServiceType}}HTTPServer interface {
 {{- end}}
 }
 
-func Register{{.ServiceType}}HTTPServer(app *fiber.App, srv {{.ServiceType}}HTTPServer) {
+func Register{{.ServiceType}}HTTPServer(app fiber.Router, srv {{.ServiceType}}HTTPServer) {
 	r := app.Group("/")
 	{{- range .Methods}}
 	r.{{.Method}}("{{.Path}}", _{{$svrType}}_{{.Name}}{{.Num}}_HTTP_Handler(srv))
