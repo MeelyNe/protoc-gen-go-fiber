@@ -1,4 +1,4 @@
-module github.com/gopkg-dev/protoc-gen-go-fiber
+module github.com/MeelyNe/protoc-gen-go-fiber
 
 go 1.21
 
